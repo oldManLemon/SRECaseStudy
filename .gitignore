@@ -1,0 +1,8 @@
+#Venv
+/elastic/
+
+#Token file
+gitToken
+
+#Elastic Password
+elasticPass
