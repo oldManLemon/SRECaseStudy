@@ -93,11 +93,6 @@ if testConn(es):
         except:
             print("Failed to Commit")
 
-
-
-   
-
-
 else:
     print("No Connection to elastic search server")
 
