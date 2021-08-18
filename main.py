@@ -2,7 +2,7 @@ from github import Github
 from elasticsearch import Elasticsearch
 
 
-#*Creds
+#*Creds and Settings
 #Git Token
 tokenFile = open('gitToken','r')
 token = tokenFile.read()
@@ -12,6 +12,8 @@ elasticFile = open('elasticPass','r')
 elPass = elasticFile.read()
 elasticFile.close()
 
+#ElasticSearch cloud ID
+cloudID = "githubRock:ZWFzdHVzMi5henVyZS5lbGFzdGljLWNsb3VkLmNvbTo5MjQzJGYzOWJhNzdkODQxNDQ1MmQ5MjZhMGNjMWMwYWU4MjI1JGQwYzZhMzI3YjQ3YzQ0NDU5OWY0OTA3ZjMyODk5NTYy"
 
 #Github Setup
 #* https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
@@ -21,7 +23,7 @@ repo = github.get_repo("RockstarLang/rockstar")
 #Elastic Setup 
 #! This setup is only useful if you have a cloud ElasticSearch instance. Otherwise see documenation https://elasticsearch-py.readthedocs.io/en/master/api.html#elasticsearch
 es = Elasticsearch(
-cloud_id="githubRock:ZWFzdHVzMi5henVyZS5lbGFzdGljLWNsb3VkLmNvbTo5MjQzJGYzOWJhNzdkODQxNDQ1MmQ5MjZhMGNjMWMwYWU4MjI1JGQwYzZhMzI3YjQ3YzQ0NDU5OWY0OTA3ZjMyODk5NTYy",
+cloud_id=cloudID,
 http_auth=("elastic", elPass),)
 
 #Github connection, is pretty garunteed to work. 
