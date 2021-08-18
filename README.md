@@ -74,4 +74,8 @@ It uses the following map:
   
 I added the account dead as a parameter, as I was unable to retrieve the username and account creation time, in some cases. I assume the account has being deleted, but whatever the reason, githubs api is unable to source that information. So I have acknowledged it in the results and moved on. 
 
+
+### Other
 The basics results of attempting to add data to the elasticSearch is printed to the console. I have it set this way as I can't stand it when there is no feed back while running the script. 
+
+You could also salt and hash the passwords with bycrypt but, again as this is quick demo script I have not done this. 
